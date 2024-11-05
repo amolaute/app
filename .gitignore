@@ -28,6 +28,10 @@ yarn-error.log
 !.vscode/extensions.json
 .history/*
 
+# Editor config
+.vscode/
+.editorconfig
+
 # Miscellaneous
 /.angular/cache
 .sass-cache/
@@ -40,3 +44,5 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+app.zip

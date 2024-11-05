@@ -1,0 +1,139 @@
+
+<div class="mt-lg-5">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Contact</h2>
+    <p>Feel Free To Send Us a Message About our Services</p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-5">
+
+        <div class="info-wrap">
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+            <i class="bi bi-geo-alt flex-shrink-0"></i>
+            <div>
+              <h3>Address</h3>
+              <small>RudraKonnect
+                Office No E-208, First Floor, Hi-Tech Business City, Plot No 31N, Opp. Ajanta Pharma, MIDC Chikalthana,
+                Chhatrapati Sambhajinagar. MH 431001 INDIA</small>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+            <i class="bi bi-telephone flex-shrink-0"></i>
+            <div>
+              <h3>Call Us</h3>
+              <small>+91 9545757831</small>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+            <i class="bi bi-envelope flex-shrink-0"></i>
+            <div>
+              <h3>Email Us</h3>
+              <small>{{"info@rudrakonnect.net"}}</small>
+            </div>
+          </div><!-- End Info Item -->
+
+          <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3752.1375600743977!2d75.3925781!3d19.8764125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdb9815a369bc63%3A0xb7e169df0f1543f2!2sV9GV%2BH28%2C%20Chhatrapati%20Sambhajinagar%20(Aurangabad)%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1729330006508!5m2!1sen!2sin"
+            frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+     
+      <div class="col-lg-7">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()" class="php-email-form needs-validation" novalidate>
+          <div class="row gy-4">
+            <div class="col-md-6">
+              <label for="name-field" class="pb-2">Your Name</label>
+              <input
+                type="text"
+                name="name"
+                formControlName="name"
+                id="name-field"
+                class="form-control"
+                [ngClass]="{'is-invalid': form.get('name')?.invalid && form.get('name')?.touched}"
+                required
+              />
+              <div class="invalid-feedback">
+                Please enter your name.
+              </div>
+            </div>
+        
+            <div class="col-md-6">
+              <label for="email-field" class="pb-2">Your Email</label>
+              <input
+                type="email"
+                class="form-control"
+                formControlName="email"
+                name="email"
+                id="email-field"
+                [ngClass]="{'is-invalid': form.get('email')?.invalid && form.get('email')?.touched}"
+                required
+              />
+              <div class="invalid-feedback">
+                Please enter a valid email address.
+              </div>
+            </div>
+        
+            <div class="col-md-12">
+              <label for="subject-field" class="pb-2">Subject</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="subject"
+                name="subject"
+                id="subject-field"
+                [ngClass]="{'is-invalid': form.get('subject')?.invalid && form.get('subject')?.touched}"
+                required
+              />
+              <div class="invalid-feedback">
+                Please enter a subject.
+              </div>
+            </div>
+        
+            <div class="col-md-12">
+              <label for="message-field" class="pb-2">Message</label>
+              <textarea
+                class="form-control"
+                name="message"
+                formControlName="message"
+                rows="10"
+                id="message-field"
+                [ngClass]="{'is-invalid': form.get('message')?.invalid && form.get('message')?.touched}"
+                required
+              ></textarea>
+              <div class="invalid-feedback">
+                Please enter your message.
+              </div>
+            </div>
+        
+            <div class="col-md-12 text-center">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+        
+              <button type="submit" class="btn btn-primary" [disabled]="loading">
+                <span *ngIf="!loading">Send Message</span>
+                <span *ngIf="loading" class="spinner-border spinner-border-sm"></span> 
+              </button>
+            </div>
+          </div>
+        </form>
+        
+
+      </div><!-- End Contact Form -->
+
+    </div>
+
+  </div>
+
+
+</div>
